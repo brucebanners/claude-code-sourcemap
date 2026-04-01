@@ -1,53 +1,47 @@
 # claude-code-sourcemap
 
-[![linux.do](https://img.shields.io/badge/linux.do-huo0-blue?logo=linux&logoColor=white)](https://linux.do)
-
 > [!WARNING]
-> This repository is **unofficial** and is reconstructed from the public npm package and source map analysis, **for research purposes only**.
-> It does **not** represent the original internal development repository structure.
+> This repository is **unofficial** and was reconstructed from the publicly available npm package and its source map, **for research and educational purposes only**.
 >
-> 本仓库为**非官方**整理版，基于公开 npm 发布包与 source map 分析还原，**仅供研究使用**。
-> **不代表**官方原始内部开发仓库结构。
-> 一切基于L站"飘然与我同"的情报提供
+> It does **not** represent Anthropic's original internal repository structure or development history.
 
-## 概述
+## Overview
 
-本仓库通过 npm 发布包（`@anthropic-ai/claude-code`）内附带的 source map（`cli.js.map`）还原的 TypeScript 源码，版本为 `2.1.88`。
+This repository contains the TypeScript source code of **Claude Code v2.1.88**, recovered from the source map (`cli.js.map`) that was accidentally included in the official npm package `@anthropic-ai/claude-code`.
 
-## 来源
+## Source Information
 
-- npm 包：[@anthropic-ai/claude-code](https://www.npmjs.com/package/@anthropic-ai/claude-code)
-- 还原版本：`2.1.88`
-- 还原文件数：**4756 个**（含 1884 个 `.ts`/`.tsx` 源文件）
-- 还原方式：提取 `cli.js.map` 中的 `sourcesContent` 字段
+- **npm Package**: [@anthropic-ai/claude-code](https://www.npmjs.com/package/@anthropic-ai/claude-code)
+- **Version**: `2.1.88`
+- **Total recovered files**: **4756**
+- **TypeScript source files**: **1884** (`.ts`/`.tsx`)
+- **Recovery method**: Extracting the `sourcesContent` field from `cli.js.map`
 
-## 目录结构
-
-```
+## Directory Structure
 restored-src/src/
-├── main.tsx              # CLI 入口
-├── tools/                # 工具实现（Bash、FileEdit、Grep、MCP 等 30+ 个）
-├── commands/             # 命令实现（commit、review、config 等 40+ 个）
-├── services/             # API、MCP、分析等服务
-├── utils/                # 工具函数（git、model、auth、env 等）
+├── main.tsx              # CLI entry point
+├── tools/                # Tool implementations (Bash, FileEdit, Grep, MCP, and 30+ others)
+├── commands/             # Command implementations (commit, review, config, and 40+ others)
+├── services/             # Services (API, MCP, analysis, etc.)
+├── utils/                # Utility functions (git, model, auth, env, etc.)
 ├── context/              # React Context
-├── coordinator/          # 多 Agent 协调模式
-├── assistant/            # 助手模式（KAIROS）
-├── buddy/                # AI 伴侣 UI
-├── remote/               # 远程会话
-├── plugins/              # 插件系统
-├── skills/               # 技能系统
-├── voice/                # 语音交互
-└── vim/                  # Vim 模式
-```
+├── coordinator/          # Multi-agent coordination system
+├── assistant/            # Assistant mode (includes KAIROS)
+├── buddy/                # AI companion / pet UI
+├── remote/               # Remote session handling
+├── plugins/              # Plugin system
+├── skills/               # Skills system
+├── voice/                # Voice interaction
+└── vim/                  # Vim mode
+text## Disclaimer
 
-## 声明
+- The original source code is copyrighted by **[Anthropic](https://www.anthropic.com)**.
+- This repository is provided **solely for technical research and learning purposes**.  
+  **Do not use it for any commercial purposes.**
+- If you believe this infringes on any rights, please contact the repository owner for removal.
 
-- 源码版权归 [Anthropic](https://www.anthropic.com) 所有
-- 本仓库仅用于技术研究与学习，请勿用于商业用途
-- 如有侵权，请联系删除
-## 来源与原作者说明
+## Credits & Original Source
 
-- 来源：https://github.com/ChinaSiro/claude-code-sourcemap
-- 原作者 / 原仓库：ChinaSiro / claude-code-sourcemap
-- 说明：本仓库基于上述来源项目整理或镜像，仅供参考，不主张对原始作者署名或权利归属作任何变更。
+- **Original mirror**: [ChinaSiro/claude-code-sourcemap](https://github.com/ChinaSiro/claude-code-sourcemap)
+- This repository is a fork/mirror based on the above project.
+- No changes to authorship or rights are claimed.
