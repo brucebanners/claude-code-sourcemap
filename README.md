@@ -17,7 +17,7 @@ This repository contains the TypeScript source code of **Claude Code v2.1.88**, 
 - **TypeScript source files**: **1884** (`.ts`/`.tsx`)
 - **Recovery method**: Extracting the `sourcesContent` field from `cli.js.map`
 
-
+```bash
 restored-src/src/
 ├── main.tsx              # CLI entry point
 ├── tools/                # Tool implementations (Bash, FileEdit, Grep, MCP, and 30+ others)
@@ -33,6 +33,7 @@ restored-src/src/
 ├── skills/               # Skills system
 ├── voice/                # Voice interaction
 └── vim/                  # Vim mode
+````
 text## Disclaimer
 
 - The original source code is copyrighted by **[Anthropic](https://www.anthropic.com)**.
